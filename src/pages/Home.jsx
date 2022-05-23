@@ -43,8 +43,7 @@ function Home(){
                 title={"Series populares"}
             />
             <Separator height={'40px'}/>
-            <button onClick={() => console.log(data)}>CLG DATA</button>
-            <button onClick={() => authDispatcher({type:authType.LOGOUT})}>LOGOUT</button>
+            
         </div>
     </div>
     );
