@@ -11,9 +11,9 @@ function App() {
 
   return (
     <AppContext.Provider value={{authState, authDispatcher}}>
-      <ProtectedRoutes>
+      
         <Home></Home>
-      </ProtectedRoutes>
+      
     </AppContext.Provider>
   );
 }

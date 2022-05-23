@@ -30,7 +30,7 @@ function Carousel({service, title = "loremipsum"}) {
             <p className={styles.carousel_title}>{title}</p>
             <Slider {...settings}>
             {data.results.map((e) => 
-                <Card key={e.id} title={e.title} path={e.backdrop_path}></Card>    
+                <Card key={e.id} title={e.title ? e.title : e.name} path={e.backdrop_path}></Card>    
             )}
             </Slider>
         </div>

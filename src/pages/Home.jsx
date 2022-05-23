@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 function Home(){
     const {authDispatcher} = useContext(AppContext);
 
-    const [loading , data, error] = useGetData(services.tryGetTopRatedMovies, 1);
+    const [loading , data, error] = useGetData(services.tryGetTopRatedTv, 1);
 
     return (
     <div>  
@@ -26,6 +26,21 @@ function Home(){
             <Carousel 
                 service={services.tryGetTopRatedMovies}
                 title={"Peliculas aclamadas por la crítica"}
+            />
+            <Separator height={'40px'}/>
+            <Carousel 
+                service={services.tryGetTopRatedTv}
+                title={"Series aclamadas por la crítica"}
+            />
+            <Separator height={'40px'}/>
+            <Carousel 
+                service={services.tryGetPopularMovies}
+                title={"Películas populares"}
+            />
+            <Separator height={'40px'}/>
+            <Carousel 
+                service={services.tryGetPopularTv}
+                title={"Series populares"}
             />
             <Separator height={'40px'}/>
             <button onClick={() => console.log(data)}>CLG DATA</button>

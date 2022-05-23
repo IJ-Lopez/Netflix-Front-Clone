@@ -46,5 +46,29 @@ export const services = {
         await axios.get(url).then((r) => response = r).catch((er) => response = er.response);
         return response;
 
+    },
+    tryGetTopRatedTv: async (page = 1) => {
+      const url = createUrl.api(...["topRatedTv", ,page]);
+      
+      let response;
+      await axios.get(url).then((r) => response = r).catch((er) => response = er.response);
+      return response;
+
+    },
+    tryGetPopularMovies: async (page = 1) => {
+      const url = createUrl.api(...["popularMovies", ,page]);
+      
+      let response;
+      await axios.get(url).then((r) => response = r).catch((er) => response = er.response);
+      return response;
+
+    },
+    tryGetPopularTv: async (page = 1) => {
+      const url = createUrl.api(...["popularTv", ,page]);
+      
+      let response;
+      await axios.get(url).then((r) => response = r).catch((er) => response = er.response);
+      return response;
+
     }
 };
